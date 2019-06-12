@@ -135,10 +135,10 @@ $.ajax({
         $.each(formData, function (key, value) {
             if (value.type == 1) {
                 substr += '<div class="sy-form-items"><div class="sy-form_label">' +
-                    value.name + '</div><input class = "sy-form_input" disabled type = "text" value="' + value.fieldValue + '"><div class = "sy-form_right"><i class="icon icon-caretdown" onclick="handleSelect(' + key + ',' + value.type + ')"></i></div></div>'
+                    value.name + '</div><input class = "sy-form_input" disabled  onclick="handleSelect(' + key + ',' + value.type + ')" type = "text" value="' + value.fieldValue + '"><div class = "sy-form_right"><i class="icon icon-caretdown" onclick="handleSelect(' + key + ',' + value.type + ')"></i></div></div>'
             } else if (value.type == 2) {
                 substr += '<div class="sy-form-items"><div class="sy-form_label">' +
-                    value.name + '</div><input class = "sy-form_input" disabled type = "text"  value="' + value.fieldValue + '"><div class = "sy-form_right"><i class="icon icon-caretdown" onclick="handleSelect(' + key + ',' + value.type + ')"></i></div></div>'
+                    value.name + '</div><input class = "sy-form_input" disabled onclick="handleSelect(' + key + ',' + value.type + ')" type = "text"  value="' + value.fieldValue + '"><div class = "sy-form_right"><i class="icon icon-caretdown" onclick="handleSelect(' + key + ',' + value.type + ')"></i></div></div>'
             } else if (value.type == 3) {
                 substr += '<div class="sy-form-items"><div class="sy-form_label">' +
                     value.name + '</div><input class = "sy-form_input" type = "text"  value="' + value.fieldValue + '"></div>'
@@ -147,11 +147,17 @@ $.ajax({
                     value.name + '</div><input class = "sy-form_input" type = "number"  value="' + value.fieldValue + '"></div>'
             } else if (value.type == 5) {
                 substr += '<div class="sy-form-items"><div class="sy-form_label">' +
-                    value.name + '</div><input readonly type="text" id="date-group1-2"' + value.fieldValue + '"></div>'
+                    value.name + '</div><input id="demo1" readonly type="text"  vale="' + value.fieldValue + '"><div class = "sy-form_right"><i class="icon icon-caretdown"></i></div></div>'
             }
-
         })
         $('.sy-form-item').html(substr)
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#demo1', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+            'minDate': '1970-01-01', //最小日期
+            'maxDate': '2099-12-31' //最大日期
+        });
     },
     error: function () {
 
@@ -168,7 +174,7 @@ function handleSelect(index, type) {
     $('body').css('overflow', 'hidden')
     $('.sy-select').css('display', 'block')
     $(".sy-cavans").animate({
-        height: "45%"
+        height: "40%"
     }, 200);
     let str = ''
     $.each(formData[index].optionValue[0].values, function (key, value) {
@@ -266,7 +272,6 @@ function Toast(type, name, value) {
             $('.sy-toast').html('请选择' + name)
             ToastCheck()
         } else if (type == 3 || type == 4) {
-            console.log(name)
             $('.sy-toast').html('请填写' + name)
             ToastCheck()
         }
@@ -279,7 +284,6 @@ function Toast(type, name, value) {
 
 //提交表单数据
 function handleConfirm() {
-    console.log(formData)
     var bool = true
     var phoenPatter = /^1[3-9]\d{9]$/
     $.each(formData, function (key, value) {
@@ -368,7 +372,6 @@ function shareImg() {
     var element = document.querySelector('.sy-headershareImg');
     //要显示图片的img标签
     var image = document.querySelector('#img');
-    console.log($('.img'))
     // var width = $('.img')[0].clientWidth
     // var height = $('.img')[0].clientHeight
     //调用html2image方法
@@ -392,13 +395,4 @@ function shareImg() {
     }
     $('.sy-shareImg').css('display', 'none')
     $('.sy-shareCanvas').css('display', 'block')
-}
-
-window.onload = function () {
-    new Jdate({
-        el: '#date-group1-2',
-        format: 'YYYY-MM-DD',
-        beginYear: 2000,
-        endYear: 2200
-    })
 }
