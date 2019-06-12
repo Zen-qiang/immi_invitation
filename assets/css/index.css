@@ -1,0 +1,451 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    overflow: scroll;
+}
+
+.sy-page {
+    font-family: "微软雅黑";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: black;
+    padding: 0;
+    margin: 0;
+    background-color: #eeeeee;
+    /* overflow: scroll; */
+}
+
+.sy-headerImg {
+    color: #fff;
+    width: 100%;
+    position: relative;
+    transition: height 2s;
+}
+
+.sy-share {
+    text-align: right;
+    padding: 0;
+    padding-right: 0.3rem;
+    padding-top: 0.1rem;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+
+.sy-icon {
+    font-size: 0.6rem;
+}
+
+.backgroundImage {
+    width: 100%;
+}
+
+.sy-word {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, transparent 0%, #030303);
+    background-image: -webkit-linear-gradient(to bottom, transparent 0%, #030303);
+}
+
+.sy-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 2.5rem;
+    border-radius: 50%;
+}
+
+.sy-title {
+    padding-top: 0.6rem;
+    font-weight: 500;
+    line-height: 0.8rem;
+    font-size: 0.5rem;
+    /* letter-spacing: 0.005rem; */
+}
+
+.sy-contenttitile span {
+    display: block;
+    color: #fff0f5;
+    padding-top: 1.3rem;
+    font-size: 0.3rem;
+    letter-spacing: 0.02rem;
+    font-weight: 100;
+    position: relative;
+}
+
+.sy-contenttitile span::before, .sy-contenttitile span::after {
+    content: "";
+    /*CSS伪类用法*/
+    position: absolute;
+    /*定位背景横线的位置*/
+    top: 83%;
+    background: #262626;
+    /*宽和高做出来的背景横线*/
+    width: 5%;
+    height: 0.02rem;
+}
+
+.sy-contenttitile span::before {
+    left: 30%;
+}
+
+.sy-contenttitile span::after {
+    right: 30%;
+}
+
+.sy-contenttime {
+    padding-top: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.25rem;
+}
+
+.sy-contentaddress {
+    width: 100%;
+    padding-top: 0.3rem;
+    line-height: 0.4rem;
+    font-size: 0.25rem;
+}
+
+.sy-content {
+    width: 79%;
+    margin: auto;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.sy-url {
+    font-size: 0.3rem;
+    padding-top: 0.35rem;
+}
+
+.sy-uptop {
+    padding-top: 0.4rem;
+}
+
+.sy-fieldservie {
+    width: 100%;
+}
+
+.sy-fieldservie img {
+    width: 100%;
+}
+
+.sy-form {
+    margin: 0 0.4rem;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 0.4rem;
+    color: black;
+}
+
+.sy-bmtitle {
+    display: block;
+    padding-top: 1rem;
+    position: relative;
+    font-size: 0.32rem;
+}
+
+.sy-bmtitle span::before, .sy-bmtitle span::after {
+    content: "";
+    /*CSS伪类用法*/
+    position: absolute;
+    /*定位背景横线的位置*/
+    top: 84%;
+    background: #D1D1D1;
+    /*宽和高做出来的背景横线*/
+    width: 6%;
+    height: 0.01rem;
+}
+
+.sy-bmtitle span::before {
+    left: 30%;
+}
+
+.sy-bmtitle span::after {
+    right: 30%;
+}
+
+.sy-button {
+    padding: 0.8rem 0.6rem;
+}
+
+.sy-text {
+    background-color: red;
+    border-radius: 25px;
+    padding: 0.25rem 0;
+    color: #fff;
+    font-size: 0.4rem;
+}
+
+.sy-form-item {
+    padding: 0 0.4rem;
+    font-size: 0.3rem;
+    padding-top: 0.8rem;
+    line-height: 0.5rem;
+}
+
+.sy-form-items {
+    padding: 0.3rem 0;
+    border-bottom: 0.02rem solid #eeeeee;
+    text-align: left;
+}
+
+.sy-form_label {
+    width: 35%;
+    padding-right: 0.1rem;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.sy-form_input {
+    width: 58%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sy-form-items input {
+    width: 58%;
+    border: none;
+    font-size: 0.3rem;
+    padding: 0;
+}
+
+.sy-form-items input:focus {
+    border: none;
+    font-size: 0.3rem;
+    outline: none;
+}
+
+.sy-form_right {
+    width: 5%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sy-footer {
+    padding: 1.3rem 0;
+    font-size: 0.4rem;
+    line-height: 0.5rem;
+}
+
+.sy-web {
+    font-size: 0.3rem;
+    color: #a3a9af;
+}
+
+.sy-select {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+}
+
+.sy-cavans {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    z-index: 2002;
+}
+
+.sy-ul {
+    margin-top: 1rem;
+    font-size: 0.4rem;
+    text-align: center;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.sy-transparent {
+    filter: Alpha(opacity=0);
+    opacity: 0;
+    height: 55%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 0.3rem;
+    line-height: 0.75rem;
+}
+
+.is-selected {
+    font-size: 0.32rem;
+    color: #26a2ff;
+}
+
+button[disabled], html input[disabled] {
+    background-color: #fff;
+}
+
+.sy-buttons {
+    padding: 0.2rem 0.1rem;
+    /* height: 0.75rem; */
+    color: #26a2ff;
+    border-bottom: 0.01rem solid #eaeaea;
+}
+
+.sy-buttonchooice {
+    display: inline-block;
+    margin: 0 1.1rem;
+    ;
+    font-size: 0.33rem;
+}
+
+.sy-shareCanvas {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2004;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#img {
+    width: 80%;
+    height: 81%;
+    position: relative;
+    left: 0;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 2005;
+    margin-top: 14%;
+}
+
+.sy-save {
+    color: #FFFAF0;
+    font-size: 0.2rem;
+}
+
+.sy-shareImg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2004;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.sy-headershareImg {
+    color: #fff;
+    width: 80%;
+    height: 81%;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 2005;
+}
+
+.sy-slogo {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 2.8rem;
+    border-radius: 50%;
+}
+
+.sy-stitle {
+    padding: 0.35rem 0 0 0;
+}
+
+.sy-scontenttitile span {
+    display: block;
+    color: #fff0f5;
+    /* padding-top: 1.3rem; */
+    font-size: 0.25rem;
+    letter-spacing: 0.02rem;
+    font-weight: 100;
+    position: relative;
+}
+
+.sy-scontenttitile span::before, .sy-scontenttitile span::after {
+    content: "";
+    /*CSS伪类用法*/
+    position: absolute;
+    /*定位背景横线的位置*/
+    top: 46%;
+    background: #262626;
+    /*宽和高做出来的背景横线*/
+    width: 5%;
+    height: 0.02rem;
+}
+
+.sy-scontenttitile span::before {
+    left: 27%;
+}
+
+.sy-scontenttitile span::after {
+    right: 27%;
+}
+
+.sy-scontenttime {
+    padding-top: 0.1rem;
+    line-height: 0.3rem;
+    font-size: 0.22rem;
+}
+
+.sy-code {
+    text-align: center;
+}
+
+.sy-scontentaddress {
+    width: 100%;
+    padding-top: 0.3rem;
+    line-height: 0.4rem;
+    font-size: 0.22rem;
+}
+
+.sy-scontent {
+    width: 79%;
+    margin: auto;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.sy-surl {
+    font-size: 0.22rem;
+    padding-top: 0.35rem;
+}
+
+.sy-toast {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.3);
+    width: 80%;
+    color: #fff;
+    font-size: 0.4rem;
+    border-radius: 5px;
+    height: 0.5rem;
+    padding: 0.1rem 0;
+    z-index: 2010;
+    display: none;
+}

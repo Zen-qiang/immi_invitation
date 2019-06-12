@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>immi</title>
+    <!-- <link rel="stylesheet" href="./bootstrap-3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/jquery-3.4.1.js"></script>
+    <script src="./assets/js/jdate.min.js"></script>
+    <script src="./assets/js/rem.js"></script>
+</head>
+
+<body>
+    <div class="sy-page">
+        <div class="sy-shareCanvas" onclick="handleCancelShare()">
+            <img id="img" class="img" />
+            <div class="sy-save">长按图片保存至相册</div>
+        </div>
+        <div class="sy-toast"></div>
+        <div class="sy-shareImg">
+            <!-- <img :src="imgUrl" alt=""> -->
+            <div class="sy-headershareImg">
+                <img class="backgroundImage" alt="" crossorigin="anonymous">
+                <div class="sy-word text-center">
+                    <img class="sy-slogo" alt="" crossorigin="anonymous">
+                    <div class="sy-stitle">
+                        <div class="sy-estitle"></div>
+                        <div class="sy-zntitle"></div>
+                    </div>
+                    <div class="sy-code">
+                        <div id="qrCode">
+                            <div id="canvas" style="width:60px;height: 60px;margin:0.2rem auto;"></div>
+                        </div>
+                    </div>
+                    <div class="sy-scontenttitile"><span class="sy-stitleeg"></span></div>
+                    <div class="sy-scontenttime">
+                        <div class="sy-start_time"></div>
+                        <div class="sy-end_time"></div>
+                    </div>
+                    <div class="sy-scontentaddress">
+                        <div class="sy-scontent"></div>
+                    </div>
+                    <div class="sy-surl"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sy-web">
+            <div class="sy-headerImg">
+                <img class="backgroundImage" src="./assets/img/bg-banner.jpg" alt="">
+                <div class="sy-word text-center">
+                    <div class="sy-share" onclick="handleShare()">
+                        <i class="icon icon-share sy-icon"></i>
+                    </div>
+                    <img class="sy-logo" src="./assets/img/logo.jpg" alt="">
+                    <div class="sy-title">
+                        <div class="sy-estitle"></div>
+                        <div class="sy-zntitle"></div>
+                    </div>
+                    <div class="sy-contenttitile"><span class="sy-titleeg"></span></div>
+                    <div class="sy-contenttime">
+                        <div class="sy-start_time"></div>
+                        <div class="sy-end_time"></div>
+                    </div>
+                    <div class="sy-contentaddress">
+                        <div class="sy-content"></div>
+                    </div>
+                    <div class="sy-url"></div>
+                    <div class="sy-uptop">
+                        <i class="icon icon-up sy-upicon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="sy-fieldservie">
+                <img src="./assets/img/signup.jpg" alt="">
+            </div>
+            <div class="sy-form">
+                <div class="sy-bmtitle"><span>报名信息</span></div>
+                <div class="sy-form-item"></div>
+                <div class="sy-select">
+                    <div class="sy-transparent" onclick="handleCancel()"></div>
+                    <div class="sy-cavans">
+                        <div class="sy-buttons" style="width:100%">
+                            <div class="sy-buttonchooice">
+                                <div class="sy-cancel" onclick="handleCancel()">取消</div>
+                            </div>
+                            <div class="sy-buttonchooice">
+                                <div class="sy-confirm" onclick="handleQue()">确定</div>
+                            </div>
+                        </div>
+                        <div class="sy-ul">
+                            <ul class="sy-option">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sy-button" onclick="handleConfirm()">
+                    <div class="sy-text">立即报名</div>
+                </div>
+            </div>
+            <div class="sy-footer">
+                <div>RSVP:Michelle 13795268019</div>
+                <div class="text-muted sy-web">www.immi-fashion.com</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/qrcode.min.js"></script>
+<script src="./assets/js/html2canvas.js"></script>
+<script src="./assets/js/index.js"></script>
+
+</html>
